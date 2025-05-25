@@ -1,7 +1,7 @@
 本小组选择Nature Communications 文章中 (Wang, Y., Sun, H., Li, G. et al. Impact of maternal and offspring smoking and breastfeeding on oesophageal cancer in adult offspring. Nat Commun 16, 938 (2025). https://doi.org/10.1038/s41467-025-56252-8) 的 Fig.7c
 小组分工
 姜一芊   复现图一图二
-邹杨    复现图四
+邹杨    复现图四合并保存
 r代码
 library(ggplot2)
 library(readxl)
@@ -118,3 +118,8 @@ hr_plot
 
 p4 <- hr_plot
 
+# 组合图形
+(p1+p2)/(p3+p4)
+
+# 保存图形
+ggsave('RCS.pdf', height = 7, width = 8.5)
